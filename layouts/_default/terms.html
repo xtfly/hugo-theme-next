@@ -1,0 +1,37 @@
+{{ define "main_class"}}{{ end}}
+
+{{ define "main_content" }}
+<div id="posts" class="posts-expand">
+    {{ if eq .Data.Plural  "categories" }}
+     <div class="category-all-page">
+        <div class="category-all-title">
+            目前共计 {{ len .Data.Terms }} 个{{ .Site.Params.Strings.Categories  }}
+        </div>
+        <div class="category-all">
+          <ul class="category-list">
+               {{ range $name, $items := .Site.Taxonomies.categories }}
+              <li class="category-list-item">
+                  <a class="category-list-link" href="/categories/{{ $name | urlize | lower }}">{{ $name }}</a>
+              <span class="category-list-count"><sup>{{ len $items }}</sup></span>
+              </li>
+              {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+
+      {{ if eq .Data.Plural  "tags" }}
+       <div class="tag-cloud">
+        <div class="tag-cloud-title">
+            目前共计 {{ len .Data.Terms }} 个{{ .Site.Params.Strings.Tags  }}
+        </div>
+        <div class="tag-cloud-tags">
+            {{ range $name, $items := .Site.Taxonomies.tags }}
+             <a href="/tags/{{ $name | urlize | lower  }}" style="font-size: 24.5px; color: #212121">{{ $name }}</a>
+             <span class="tag-list-count"><sup>{{ len $items }}</sup></span>
+             {{ end }}
+        </div>
+       </div>
+      {{ end }}
+</div>
+{{ end }}

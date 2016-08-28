@@ -1,0 +1,92 @@
+title =  "蘭陵N散記"
+languageCode = "zh-CN"
+baseurl = "http://lanlingzi.cn/"
+theme =  "next"
+MetaDataFormat =  "yaml"
+canonifyurls =  true
+builddrafts =  false
+PaginatePath =  "p"
+Paginate = 10
+RSSUri =  "feed.xml"
+disablePathToLower =  false
+hasCJKLanguage =  true
+preserveTaxonomyNames = false
+uglyurls = false
+pygmentsStyle = "default"
+pygmentsUseClasses = true
+
+[Params]
+  AuthorHomepage = "http://lanlingzi.cn/"
+  Introduce = "Programmer & Architect"
+  Description = "韶华易逝，往昔不再"
+  Keywords =  "蘭陵N散記,兰陵,独立博客,程序员,架构师,个人思考,读书笔记,技术分享,Golang"
+  Subtitle = "一指流沙，程序年华"
+  Imglogo = "/img/logo.png"
+  AuthorImg = "/img/author.jpg"
+  DateFormat = "2006-01-02"
+  YearFormat = "2006年"
+  MonthFormat = "01-02"
+  BaiduStatsId = "0b07433b4ab8d587dae7d34e71973839"
+
+[Author]
+  Name = "兰陵子"
+
+[Params.DuoShuo]
+  ShortName = "lanlingzi"
+
+[Params.Strings]
+  Search = "搜索"
+  Categories = "分类"
+  Archive = "归档"
+  Tags = "标签"
+  Rss = "RSS 订阅"
+  Toc = "文章目录"
+  SiteInfo = "站点概览"
+  Links = "友情链接"
+  Blog = "日志"
+
+[[Menu.Main]]
+  Name = "首页"
+  URL = "/"
+  Weight = 0
+  Pre = "home"
+[[Menu.Main]]
+  Name = "技术"
+  Pre = "code"
+  URL = "/categories/技术/"
+  Weight = 1
+[[Menu.Main]]
+  Name = "感想"
+  Pre = "tint"
+  URL = "/categories/感想/"
+  Weight = 2
+[[Menu.Main]]
+  Name = "笔记"
+  Pre = "book"
+  URL = "/categories/笔记/"
+  Weight = 4
+[[Menu.Main]]
+  Name = "杂记"
+  Pre = "leaf"
+  URL = "/categories/杂记/"
+  Weight = 5
+[[Menu.Main]]
+  Name = "归档"
+  Pre = "archive"
+  URL = "/post/"
+  Weight = 6
+[[Menu.Main]]
+  Name = "关于"
+  Pre = "user"
+  URL = "/about/"
+  Weight = 7
+
+[[Params.Socials]]
+  Name = "GitHub"
+  Icon = "github"
+  URL = "https://github.com/xtfly/"
+
+[[Params.Socials]]
+  Name = "知乎"
+  Icon = "globe"
+  URL = "https://www.zhihu.com/people/lan-ling-xin-yun"  

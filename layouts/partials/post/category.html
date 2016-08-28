@@ -1,0 +1,19 @@
+{{ if isset .Params "categories" }}
+{{ if not (eq (len .Params.categories) 0) }}
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  {{ range .Params.categories }}
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="{{ $.Site.BaseURL }}categories/{{ . | urlize }}" itemprop="url" rel="index">
+        <span itemprop="name">{{ . }}</span>
+      </a>
+      &nbsp; 
+    </span>
+  {{ end }}
+</span>
+{{ end }}
+{{ end }}

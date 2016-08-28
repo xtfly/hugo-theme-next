@@ -1,0 +1,32 @@
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+ <section id="posts" class="posts-expand">
+{{ range $paginator.Pages }}
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="{{ .Permalink }}" itemprop="url">
+        {{ .Title }}
+        </a>
+      </h1>
+      <div class="post-meta">
+      {{ partial "post/date.html" .}} 
+      {{ partial "post/category.html" .}}
+      {{ partial "post/readtime.html" .}}
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    {{ .Summary }}
+    </div>
+    {{ if .Truncated }}
+    <div class="post-more-link text-center">
+    <a class="btn" href="{{ .Permalink }}" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    {{ end }}
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+{{end}}
+</section>
+{{ partial "pagination.html" . }}
+

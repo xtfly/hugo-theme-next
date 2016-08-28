@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}zh-CN{{ end }}">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> {{ if .Keywords }}
+    <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">{{ else if eq .URL "/" }}
+    <meta name="keywords" content="{{ .Site.Params.Keywords }}">{{ end }}
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ else }}{{ .Title }}{{ end }}"> {{ with .Site.Author.Name }}
+    <meta name="author" content="{{ . }}">{{ end }}
+    <meta itemprop="name" content="{{ if ne .URL " / " }}{{ .Title }} - {{ end }}{{ .Site.Title }}">
+    <meta itemprop="description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary }}{{ else }}{{ .Title }}{{ end }}">
+    <meta itemprop="image" content="/img/author.jpg"> {{ if .Site.Params.Twitter }}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@{{ .Site.Params.Twitter }}" />
+    <meta name="twitter:title" content="{{ if ne .URL " / " }}{{ .Title }} - {{ end }}{{ .Site.Title }}" />{{ end }} {{ with .Description }}
+    <meta name="twitter:description" content="{{ . }}" />{{ else }}
+    <meta name="twitter:description" content="{{ .Site.Params.Description }}">{{ end }} {{ if .RSSlink }}
+    <link rel="alternate" href="/feed.xml" title="{{ .Site.Title }}" type="application/rss+xml" />{{ end }}
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon.png" />
+    <link href="/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+{{ if .Site.Params.BaiduStatsId }}
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?{{.Site.Params.BaiduStatsId}}";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+{{ end}}
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false,
+    motion: true
+  };
+</script>
+</head>

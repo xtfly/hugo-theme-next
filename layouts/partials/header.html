@@ -1,0 +1,32 @@
+<div class="site-meta {{ if .Site.Params.Imglogo }} custom-logo {{ end }}">
+
+  <div class="custom-logo-site-title">
+    <a href="{{ .Site.BaseURL }}"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">{{ .Site.Title }}</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">{{ with .Site.Params.Subtitle }}{{ . }}{{ end }}</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      {{ range .Site.Menus.Main }}
+        <li class="menu-item">
+          <a href="{{ .URL }}" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-{{ .Pre }}"></i> <br />{{ .Name }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+</nav>
+

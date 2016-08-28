@@ -1,0 +1,40 @@
+<div class="comments" id="comments">
+{{ if isset .Site.Params "DuoShuo" }}
+  <div class="ds-thread" data-thread-key="{{ .Permalink }}"
+   data-title="{{ .Title }}" data-url="{{ .Permalink }}"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"{{ .Site.Params.DuoShuo.ShortName }}"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0]
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+{{ end }}
+
+{{ if isset .Site.Params "Disqus"}}
+<div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+var disqus_config = function () {
+this.page.url = {{ .Permalink }};
+this.page.identifier = {{ .Permalink }};
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//{{ .Site.Params.Disqus.ShortName }}.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+{{ end }}
+</div>

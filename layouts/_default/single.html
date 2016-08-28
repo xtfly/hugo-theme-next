@@ -1,0 +1,28 @@
+{{ define "main_class"}}page-home{{ end}}
+{{ define "main_content" }}
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="{{ .Permalink }}" itemprop="url">
+        {{ .Title }}
+        </a>
+      </h1>
+      <div class="post-meta">
+      {{ partial "post/date.html" .}} 
+      {{ partial "post/category.html" .}}
+      {{ partial "post/readtime.html" .}}
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    {{ .Content }}
+    </div>
+    <footer class="post-footer">
+     {{ partial "post/tags.html" .}}
+     {{ partial "post/prenext.html" .}}
+     {{ partial "widgets/share.html" .}}
+     {{ partial "widgets/comment.html" .}}
+    </footer>
+  </article>
+</section>
+{{ end }}

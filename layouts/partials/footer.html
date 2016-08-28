@@ -1,0 +1,16 @@
+<div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  {{ range (last 1 $.Site.Pages) }}
+  {{ .Date.Format "2006"}}
+  {{ end }} - {{ .Now.Year }}</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">{{ .Site.Author.Name }}</span>
+</div>
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+

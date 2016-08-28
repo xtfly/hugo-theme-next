@@ -1,0 +1,30 @@
+<div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+{{ if isset .Params "toc" }}
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      {{ .Site.Params.Strings.Toc }}
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      {{ .Site.Params.Strings.SiteInfo }}
+    </li>
+  </ul>
+{{ end }}
+    <section class="site-overview sidebar-panel {{ if not (isset .Params "toc") }} sidebar-panel-active {{ end }}">
+      {{ partial "sidebar/author.html" . }}
+      {{ partial "sidebar/state.html" . }}
+      {{ partial "sidebar/rss.html" . }}
+      {{ partial "sidebar/social.html" . }}
+      {{ partial "sidebar/link.html" . }}
+      {{ partial "sidebar/stats.html" . }}
+    </section>
+    {{ partial "sidebar/toc.html" . }}
+  </div>
+</aside>
