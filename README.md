@@ -4,9 +4,9 @@ A Hugo theme forked from [NexT](https://github.com/iissnan/hexo-theme-next).
 
 ## Discription
 
-NexT是一款简洁又富有动感的主题，由于个人使用的[Hugo](gohugo.io/)，因此自己动手移植了这款主题。
+NexT是一款简洁又富有动感的主题，由于个人使用的[Hugo](gohugo.io/)，因此自己动手移植了这款主题。
 
-[在线预览 Preview](http://www.lanlingzi.cn)
+[在线预览](http://www.lanlingzi.cn)
 
 
 ## Usage
@@ -20,9 +20,9 @@ NexT是一款简洁又富有动感的主题，由于个人使用的[Hugo]
 
 - **由于Hugo的模版引擎和Hexo有区别，部分Hexo的样式或功能暂时无法实现，持续更新**
 
-- 本主题没有进行严谨的测试，如果有问题请反馈
+- 本主题只针对个人Hugo站点简单测试过，并不一定完全适合您的定制，请根据需求调整
 
-- 欢迎提意见
+- 如果有问题请反馈，欢迎提意见
 
 ## Todo
 
