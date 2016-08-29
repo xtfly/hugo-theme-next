@@ -1,9 +1,10 @@
+
+{{ if and (isset .Site.Params "Share") (isset .Site.Params.Share "DuoShuo") }}
 <div class="comments" id="comments">
-{{ if isset .Site.Params "DuoShuo" }}
   <div class="ds-thread" data-thread-key="{{ .Permalink }}"
    data-title="{{ .Title }}" data-url="{{ .Permalink }}"></div>
 <script type="text/javascript">
-var duoshuoQuery = {short_name:"{{ .Site.Params.DuoShuo.ShortName }}"};
+var duoshuoQuery = {short_name:"{{ .Site.Params.Share.DuoShuo }}"};
 (function() {
   var ds = document.createElement('script');
   ds.type = 'text/javascript';ds.async = true;
@@ -13,9 +14,11 @@ var duoshuoQuery = {short_name:"{{ .Site.Params.DuoShuo.ShortName }}"};
   || document.getElementsByTagName('body')[0]).appendChild(ds);
 })();
 </script>
+</div>
 {{ end }}
 
-{{ if isset .Site.Params "Disqus"}}
+{{ if and (isset .Site.Params "Share") (isset .Site.Params.Share "Disqus") }}
+<div class="comments" id="comments">
 <div id="disqus_thread"></div>
 <script>
 /**
@@ -28,13 +31,11 @@ this.page.identifier = {{ .Permalink }};
 };
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
-
 s.src = '//{{ .Site.Params.Disqus.ShortName }}.disqus.com/embed.js';
-
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-{{ end }}
 </div>
+{{ end }}
