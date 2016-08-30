@@ -1,22 +1,20 @@
 title =  "蘭陵N散記"
-languageCode = "zh-CN"
+languageCode = "zh_CN"
 baseurl = "http://lanlingzi.cn/"
 theme =  "next"
 MetaDataFormat =  "yaml"
 canonifyurls =  true
 builddrafts =  false
 PaginatePath =  "p"
-Paginate = 10
-RSSUri =  "feed.xml"
+Paginate = 8
 disablePathToLower =  false
-hasCJKLanguage =  true
+hasCJKLanguage = true
 preserveTaxonomyNames = false
 uglyurls = false
 pygmentsStyle = "default"
 pygmentsUseClasses = true
 
 [Params]
-  AuthorHomepage = "http://lanlingzi.cn/"
   Introduce = "Programmer & Architect"
   Description = "韶华易逝，往昔不再"
   Keywords =  "蘭陵N散記,兰陵,独立博客,程序员,架构师,个人思考,读书笔记,技术分享,Golang"
@@ -31,8 +29,9 @@ pygmentsUseClasses = true
 [Author]
   Name = "兰陵子"
 
-[Params.DuoShuo]
-  ShortName = "lanlingzi"
+[Params.Share]
+  #DuoShuo = "lanlingzi"
+  Baidu = ""
 
 [Params.Strings]
   Search = "搜索"
