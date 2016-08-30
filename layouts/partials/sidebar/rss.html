@@ -1,6 +1,6 @@
 {{ if .RSSlink }}
 <div class="feed-link motion-element">
-<a href="{{ .Site.BaseURL }}{{.RSSlink}}" rel="alternate" type="application/rss+xml" target="_blank">
+<a href="{{.RSSlink}}" rel="alternate" type="application/rss+xml" target="_blank">
     <i class="fa fa-rss"></i>
     {{ .Site.Params.Strings.Rss }}
 </a>

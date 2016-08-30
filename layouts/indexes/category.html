@@ -3,13 +3,16 @@
 {{ define "main_content" }}
 <section id="posts" class="posts-collapse">
 <div class="collection-title">
-    <h2 >
-    {{ .Title }}
+    <h2 >{{ .Title }}
     <small>{{ .Site.Params.Strings.Categories  }}</small>
     </h2>
 </div>
-{{ $paginate := .Paginate .Data.Pages 20 }}
-{{ partial "post_simple_list.html" $paginate }}
-</section>
+{{ range (.Paginate (.Data.Pages.GroupByDate "2006") 15 ).PageGroups  }}
+<div class="collection-title">
+  <h2 class="archive-year motion-element" id="archive-year-{{ .Key }}">{{ .Key }}</h2>
+</div>
+{{ partial "post_simple_list.html" . }}
+{{ end }}
+ </section>
 {{ partial "pagination.html" . }}
 {{ end }}

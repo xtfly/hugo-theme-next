@@ -6,7 +6,7 @@
     <span class="archive-page-counter">
    目前共计 {{ len (where .Site.Pages "Type" "post") }} 篇日志。 继续努力。
     </span>
-{{ range (.Paginate (.Data.Pages.GroupByDate "2006") 20 ).PageGroups  }}
+{{ range (.Paginate (.Data.Pages.GroupByDate "2006") 15 ).PageGroups  }}
 <div class="collection-title">
   <h2 class="archive-year motion-element" id="archive-year-{{ .Key }}">{{ .Key }}</h2>
 </div>
