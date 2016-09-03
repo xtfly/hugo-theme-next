@@ -10,7 +10,9 @@
 <script type="text/javascript" src="/vendor/velocity/velocity.min.js?v=1.2.1"></script>
 <script type="text/javascript" src="/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
 <script src="/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-
+{{ if and .Site.Params.Fancybox .IsPage}}
+<script src="/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+{{end }}
 <script type="text/javascript" src="/js/utils.js"></script>
 <script type="text/javascript" src="/js/motion.js"></script>
 <script type="text/javascript" src="/js/affix.js"></script>

@@ -26,6 +26,9 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon.png" />
     <link href="/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    {{ if and .Site.Params.Fancybox .IsPage}}
+    <link href="vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    {{ end }}
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
 {{ if .Site.Params.BaiduStatsId }}
 <script>
@@ -43,7 +46,7 @@
   var CONFIG = {
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
-    fancybox: false,
+    {{ if and .Site.Params.Fancybox .IsPage}} fancybox: true, {{else }}fancybox: false, {{ end }}
     motion: true
   };
 </script>

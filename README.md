@@ -31,7 +31,6 @@ NexT是一款简洁又富有动感的主题，由于个人使用[Hugo](gohugo.io
 - [x] Auto toc display
 - [ ] Local Search
 - [ ] Support i18n
-- [ ] Customize summary
 - [ ] Customize code highlight theme
 
 ## License

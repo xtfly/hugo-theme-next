@@ -11,7 +11,7 @@ disablePathToLower =  false
 hasCJKLanguage = true
 preserveTaxonomyNames = false
 uglyurls = false
-pygmentsStyle = "default"
+pygmentsStyle = "monokai"
 pygmentsUseClasses = true
 
 [Params]
@@ -25,13 +25,14 @@ pygmentsUseClasses = true
   YearFormat = "2006年"
   MonthFormat = "01-02"
   BaiduStatsId = "0b07433b4ab8d587dae7d34e71973839"
+  Fancybox = true
 
 [Author]
   Name = "兰陵子"
 
 [Params.Share]
   #DuoShuo = "lanlingzi"
-  Baidu = ""
+  Baidu = true
 
 [Params.Strings]
   Search = "搜索"
