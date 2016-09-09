@@ -2642,9 +2642,3 @@ body {
     text-align: justify;
   }
 }
-
-#TableOfContents { margin: 1em 0 0 0; }
-#TableOfContents ul { list-style-type: decimal; margin: 0; padding: 0 25px;  }
-#TableOfContents ul li { list-style-type: decimal; }
-#TableOfContents > ul { padding: 15; }
-#TableOfContents > ul > li > ul { padding: 0; }
