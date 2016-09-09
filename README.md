@@ -4,7 +4,7 @@ A Hugo theme forked from [NexT](https://github.com/iissnan/hexo-theme-next).
 
 ## Discription
 
-NexT是一款简洁又富有动感的主题，由于个人使用[Hugo](gohugo.io/)，因此自己动手移植了这款主题。
+NexT是一款简洁又富有动感的主题，由于个人使用[Hugo](https://gohugo.io/)，因此自己动手移植了这款主题。
 
 [在线预览](http://www.lanlingzi.cn)
 
