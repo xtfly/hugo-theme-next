@@ -4,43 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
-    {{ if .Keywords }}
-    <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
-    {{ else if eq .URL "/" }}
-    <meta name="keywords" content="{{ .Site.Params.Keywords }}">
-    {{ end }}
-    {{ with .Site.Author.Name }}
-    <meta name="author" content="{{ . }}">
-    {{ end }}
-    <meta itemprop="name" content="{{ if ne .URL " / " }}{{ .Title }} - {{ end }}{{ .Site.Title }}">
-    <meta itemprop="image" content="/img/author.jpg"> 
+    <title>{{ if ne .URL " / " }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+    {{ if .Keywords }}<meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
+    {{ else }}<meta name="keywords" content="{{ .Site.Params.Keywords }}">{{ end }}
+    {{ with .Site.Author.Name }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta property="og:title" content="{{ if ne .URL " / " }}{{ .Title }}{{else}}{{ .Site.Title }}{{end}}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="{{ if ne .URL " / " }}{{ .Title }} - {{ end }}{{ .Site.Title }}" />
-    {{ with .Description }}
-    <meta name="description" content="{{ . }}" />{{ else }}
-    <meta name="description" content="{{ .Site.Params.Description }}">
-    {{ end }} 
-    {{ if .RSSlink }}
-    <link rel="alternate" href="{{.RSSlink}}" title="{{ .Site.Title }}" type="application/rss+xml" />
-    {{ end }}
+    {{ with .Description }}<meta name="description" content="{{ . }}" />
+    {{ else }}<meta name="description" content="{{ .Site.Params.Description }}">{{ end }} 
+    {{ if .RSSlink }}<link rel="alternate" href="{{.RSSlink}}" title="{{ .Site.Title }}" type="application/rss+xml" />{{ end }}
     <link rel="shortcut icon" href="/img/favicon.ico" />
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon.png" />
     <link href="/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    {{ if and .Site.Params.Fancybox .IsPage}}
-    <link href="/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    {{ end }}
+    {{ if and .Site.Params.Fancybox .IsPage}}<link href="/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />{{ end }}
     <link href="/css/main.css" rel="stylesheet" type="text/css" />
-{{ if .Site.Params.BaiduStatsId }}
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?{{.Site.Params.BaiduStatsId}}";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-{{ end}}
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
