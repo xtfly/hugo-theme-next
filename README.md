@@ -2,6 +2,8 @@
 
 A Hugo theme forked from [NexT](https://github.com/iissnan/hexo-theme-next).
 
+Hugo verion: 0.17
+
 ## Discription
 
 NexT是一款简洁又富有动感的主题，由于个人使用[Hugo](https://gohugo.io/)，因此自己动手移植了这款主题。
@@ -29,7 +31,6 @@ NexT是一款简洁又富有动感的主题，由于个人使用[Hugo](https://g
 - [x] Sidebar menu
 - [x] Sidebar links
 - [x] Auto toc display
-- [ ] Local Search
 - [ ] Support i18n
 - [ ] Customize code highlight theme
 
