@@ -2,7 +2,7 @@
 <span class="post-meta-item-icon">
     <i class="fa fa-calendar-o"></i>
 </span>
-<span class="post-meta-item-text">时间：</span>
+<span class="post-meta-item-text">{{ i18n "Time" }}{{ i18n "Colon"}}</span>
 <time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="{{ .Date.Format .Site.Params.DateFormat }}">
     {{ .Date.Format .Site.Params.DateFormat }}
 </time>

@@ -10,10 +10,10 @@
 {{ if isset .Params "toc" }}
   <ul class="sidebar-nav motion-element">
     <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-      {{ .Site.Params.Strings.Toc }}
+      {{ i18n "ToC" }}
     </li>
     <li class="sidebar-nav-overview" data-target="site-overview">
-      {{ .Site.Params.Strings.SiteInfo }}
+      {{ i18n "SiteInfo" }}
     </li>
   </ul>
 {{ end }}

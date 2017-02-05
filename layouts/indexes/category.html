@@ -4,7 +4,7 @@
 <section id="posts" class="posts-collapse">
 <div class="collection-title">
     <h2 >{{ .Title }}
-    <small>{{ .Site.Params.Strings.Categories  }}</small>
+    <small>{{ i18n "Category" }}</small>
     </h2>
 </div>
 {{ range (.Paginate (.Data.Pages.GroupByDate "2006") 15 ).PageGroups  }}

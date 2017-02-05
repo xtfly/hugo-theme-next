@@ -5,7 +5,7 @@
     {{ if eq .Data.Plural  "categories" }}
      <div class="category-all-page">
         <div class="category-all-title">
-            目前共计 {{ len .Data.Terms }} 个{{ .Site.Params.Strings.Categories  }}
+            {{ i18n "StatsCats" . }}
         </div>
         <div class="category-all">
           <ul class="category-list">
@@ -23,7 +23,7 @@
       {{ if eq .Data.Plural  "tags" }}
        <div class="tag-cloud">
         <div class="tag-cloud-title">
-            目前共计 {{ len .Data.Terms }} 个{{ .Site.Params.Strings.Tags  }}
+            {{ i18n "StatsTags" . }}
         </div>
         <div class="tag-cloud-tags">
             {{ range $name, $items := .Site.Taxonomies.tags }}

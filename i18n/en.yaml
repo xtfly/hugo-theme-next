@@ -1,0 +1,32 @@
+- id: StatsCats
+  translation: Total {{ len .Data.Terms }} categories
+- id: StatsTags
+  translation: Total {{ len .Data.Terms }} tags
+- id: StatsBlogs
+  translation: Well! Total {{ .Count }} blogs, let's press on. 
+- id: Blog
+  translation: Blogs
+- id: Category
+  translation: Categories
+- id: Archive
+  translation: Archive 
+- id: Tag
+  translation: Tags
+- id: ToC
+  translation: Table of Content
+- id: RSS
+  translation: RSS
+- id: SiteInfo
+  translation: Site Information
+- id: Link
+  translation: Links 
+- id: Time
+  translation: Published at
+- id: View
+  translation: Reading
+- id: ReadMore
+  translation: Read More
+- id: ReadingTime
+  translation: "{{ .WordCount }} words ~{{ .ReadingTime }}min"
+- id: Colon
+  translation: ":" 

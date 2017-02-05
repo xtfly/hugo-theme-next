@@ -1,23 +1,24 @@
-title =  "蘭陵N散記"
-languageCode = "zh_CN"
-baseurl = "http://lanlingzi.cn/"
-theme =  "next"
+Title =  "蘭陵N散記"
+LanguageCode = "zh-CN"
+BaseUrl = "http://lanlingzi.cn/"
+Theme =  "next"
 MetaDataFormat =  "yaml"
-canonifyurls =  true
-builddrafts =  false
+CanonifyUrls =  true
+BuildDrafts =  false
 PaginatePath =  "p"
 Paginate = 8
-disablePathToLower =  false
-hasCJKLanguage = true
-preserveTaxonomyNames = false
-uglyurls = false
-pygmentsStyle = "monokai"
-pygmentsUseClasses = true
+DisablePathToLower =  false
+HasCJKLanguage = true
+PreserveTaxonomyNames = false
+UglyUrls = false
+PygmentsStyle = "monokai"
+PygmentsUseClasses = true
+DefaultContentLanguage = "zh"
 
 [Params]
   Introduce = "Programmer & Architect"
-  Description = "韶华易逝，往昔不再"
-  Keywords =  "蘭陵N散記,兰陵,独立博客,程序员,架构师,个人思考,读书笔记,技术分享,Golang"
+  Description = "蘭陵N散記 | 博客 | 软件 | 架构 | Java | Golang"
+  Keywords =  "蘭陵N散記,兰陵,独立,博客,程序员,架构师,个人,思考,读书,笔记,技术,分享,Golang"
   Subtitle = "一指流沙，程序年华"
   Imglogo = "/img/logo.png"
   AuthorImg = "/img/author.jpg"
@@ -25,6 +26,7 @@ pygmentsUseClasses = true
   YearFormat = "2006年"
   MonthFormat = "01-02"
   BaiduStatsId = "0b07433b4ab8d587dae7d34e71973839"
+  QQStatsId = "58416275"
   Fancybox = true
 
 [Author]
@@ -34,22 +36,11 @@ pygmentsUseClasses = true
   #DuoShuo = "lanlingzi"
   Baidu = true
 
-[Params.Strings]
-  Search = "搜索"
-  Categories = "分类"
-  Archive = "归档"
-  Tags = "标签"
-  Rss = "RSS 订阅"
-  Toc = "文章目录"
-  SiteInfo = "站点概览"
-  Links = "友情链接"
-  Blog = "日志"
-
 [[Menu.Main]]
   Name = "首页"
+  Pre = "home"
   URL = "/"
   Weight = 0
-  Pre = "home"
 [[Menu.Main]]
   Name = "技术"
   Pre = "code"

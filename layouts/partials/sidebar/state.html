@@ -1,21 +1,21 @@
 <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="/post/">
-        <span class="site-state-item-count">{{ len (where .Site.Pages "Type" "post") }}</span>
-        <span class="site-state-item-name">{{ .Site.Params.Strings.Blog  }}</span>
+        <span class="site-state-item-count">{{ len (where .Site.Pages "Section" "post") }}</span>
+        <span class="site-state-item-name">{{ i18n "Blog" }}</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
         <a href="/categories/">       
         <span class="site-state-item-count">{{ len .Site.Taxonomies.categories }}</span>
-        <span class="site-state-item-name">{{ .Site.Params.Strings.Categories  }}</span>
+        <span class="site-state-item-name">{{ i18n "Category" }}</span>
         </a>
     </div>
 
     <div class="site-state-item site-state-tags">
         <a href="/tags/">
         <span class="site-state-item-count">{{ len .Site.Taxonomies.tags }}</span>
-        <span class="site-state-item-name">{{ .Site.Params.Strings.Tags  }}</span>
+        <span class="site-state-item-name">{{ i18n "Tag" }}</span>
         </a>
     </div>
 </nav>

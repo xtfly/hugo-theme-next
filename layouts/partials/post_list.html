@@ -1,4 +1,4 @@
-{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+{{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
  <section id="posts" class="posts-expand">
 {{ range $paginator.Pages }}
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
@@ -20,7 +20,7 @@
     {{ if .Truncated }}
     <div class="post-more-link text-center">
     <a class="btn" href="{{ .Permalink }}" rel="contents">
-      阅读全文 &raquo;
+      {{ i18n "ReadMore" }} &raquo;
     </a>
     </div>
     {{ end }}

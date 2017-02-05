@@ -1,0 +1,32 @@
+- id: StatsCats
+  translation: 目前共计 {{ len .Data.Terms }} 个分类
+- id: StatsTags
+  translation: 目前共计 {{ len .Data.Terms }} 个标签
+- id: StatsBlogs
+  translation: 目前共计 {{ .Count }} 篇日志。 继续努力。
+- id: Blog
+  translation: 日志
+- id: Category
+  translation: 分类
+- id: Archive
+  translation: 归档 
+- id: Tag
+  translation: 标签
+- id: ToC
+  translation: 文章目录
+- id: RSS
+  translation: "RSS 订阅"
+- id: SiteInfo
+  translation: 站点概览
+- id: Link
+  translation: 友情链接
+- id: Time
+  translation: 时间 
+- id: View
+  translation: 阅读 
+- id: ReadMore
+  translation: 阅读全文
+- id: ReadingTime
+  translation: "{{ .WordCount }} 字 ~{{ .ReadingTime }}分钟"
+- id: Colon
+  translation: "：" 

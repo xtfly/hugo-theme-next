@@ -4,7 +4,7 @@
 <section id="posts" class="posts-collapse">
     <span class="archive-move-on"></span>
     <span class="archive-page-counter">
-   目前共计 {{ len (where .Site.Pages "Type" "post") }} 篇日志。 继续努力。
+   {{ i18n "StatsBlogs" (len (where .Site.Pages "Section" "post")) }}
     </span>
 {{ range (.Paginate (.Data.Pages.GroupByDate "2006") 15 ).PageGroups  }}
 <div class="collection-title">
