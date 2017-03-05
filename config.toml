@@ -40,17 +40,17 @@ DefaultContentLanguage = "zh"
   Name = "首页"
   Pre = "home"
   URL = "/"
-  Weight = 0
+  Weight = 1
 [[Menu.Main]]
   Name = "技术"
   Pre = "code"
   URL = "/categories/技术/"
-  Weight = 1
+  Weight = 2
 [[Menu.Main]]
   Name = "感想"
   Pre = "tint"
   URL = "/categories/感想/"
-  Weight = 2
+  Weight = 3
 [[Menu.Main]]
   Name = "笔记"
   Pre = "book"

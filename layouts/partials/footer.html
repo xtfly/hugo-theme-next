@@ -2,7 +2,7 @@
   <span itemprop="copyrightYear">  &copy; 
   {{ range (last 1 (where .Data.Pages "Section" "post")) }}
   {{ .Date.Format "2006"}}
-  {{ end }} - {{ .Now.Year }}</span>
+  {{ end }} - {{ now.Year }}</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">{{ .Site.Title }}</span>
 </div>
