@@ -30,3 +30,5 @@
   translation: "{{ .WordCount }} words ~{{ .ReadingTime }}min"
 - id: Colon
   translation: ":" 
+- id: Search
+  translation: "Search" 

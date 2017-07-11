@@ -28,6 +28,12 @@
           </a>
         </li>
       {{ end }}
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> {{ i18n "Search" }}</a>
+      </li>
     </ul>
+    <div class="site-search">
+      {{ partial "widgets/search.html" .}}
+    </div>
 </nav>
 

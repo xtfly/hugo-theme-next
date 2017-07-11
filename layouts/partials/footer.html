@@ -1,13 +1,11 @@
 <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  {{ range (last 1 (where .Data.Pages "Section" "post")) }}
-  {{ .Date.Format "2006"}}
-  {{ end }} - {{ now.Year }}</span>
+  2009 - {{ now.Year }}</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">{{ .Site.Title }}</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v{{ .Hugo.Version }}</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT

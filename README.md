@@ -4,7 +4,7 @@ A Hugo theme forked from [NexT](https://github.com/iissnan/hexo-theme-next).
 
 ## Discription
 
-NexT is a simple and animated theme. I transplanted it from Hexo to [Hugo] (https://gohugo.io/) and used in my blog site.
+NexT is a simple and animated theme. I transplanted it from Hexo to [Hugo](https://gohugo.io/) and used in my blog site.
 
 [Preview online](http://www.lanlingzi.cn)
 
@@ -23,7 +23,7 @@ NexT is a simple and animated theme. I transplanted it from Hexo to [Hugo] (http
 
 - This theme has been tested only in my blog site. Maybe it's not suitable for your requirements, you can customizate it by your preferences.
 
-- Test in Hugo verion: 0.19
+- Test in Hugo verion: 0.25
 
 - If you have any questions, please give feedback
 
@@ -33,7 +33,7 @@ NexT is a simple and animated theme. I transplanted it from Hexo to [Hugo] (http
 - [x] Sidebar links
 - [x] Auto toc display
 - [x] Support i18n
-- [ ] Local Search
+- [x] Local Search
 
 ## License
 The [MIT License](LICENSE).

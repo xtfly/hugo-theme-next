@@ -30,3 +30,5 @@
   translation: "{{ .WordCount }} 字 ~{{ .ReadingTime }}分钟"
 - id: Colon
   translation: "：" 
+- id: Search
+  translation: "搜索" 
