@@ -6,15 +6,24 @@
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="/categories/">       
-        <span class="site-state-item-count">{{ len .Site.Taxonomies.categories }}</span>
+        <a href="/categories/">      
+        {{if isset .Site.Taxonomies "categories"}} 
+        <span class="site-state-item-count">{{len .Site.Taxonomies.categories}}</span>
+        {{else}}
+        <span class="site-state-item-count">0</span>
+        {{end}}
         <span class="site-state-item-name">{{ i18n "Category" }}</span>
+        
         </a>
     </div>
 
     <div class="site-state-item site-state-tags">
         <a href="/tags/">
-        <span class="site-state-item-count">{{ len .Site.Taxonomies.tags }}</span>
+        {{if isset .Site.Taxonomies "tags"}} 
+        <span class="site-state-item-count">{{len .Site.Taxonomies.tags}}</span>
+        {{else}}
+        <span class="site-state-item-count">0</span>
+        {{end}}
         <span class="site-state-item-name">{{ i18n "Tag" }}</span>
         </a>
     </div>
