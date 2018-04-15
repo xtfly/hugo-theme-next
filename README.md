@@ -10,12 +10,17 @@ NexT is a simple and animated theme. I transplanted it from Hexo to [Hugo](https
 
 ## Usage
 
-1. git clone https://github.com/xtfly/hugo-theme-next.git next
+1. download theme file: `git clone https://github.com/xtfly/hugo-theme-next.git next`
 
-2. copy next directory to theme directory in your hugo site
+2. copy `next` directory to themes directory in your hugo site
 
-3. move config.toml to the root dir in your hugo site, and modify it to the actual information for your site.
+3. move config.toml to the root directory in your hugo site, and modify it to the actual information for your site.
 
+4. create some makedown files in directory(content/post), like https://github.com/xtfly/xtfly.github.io/tree/hugo/content
+
+5. start hugo server in root directory: `hugo server`
+
+6. open brower: http://localhost:1313/
 
 ## Notes
 
@@ -23,7 +28,7 @@ NexT is a simple and animated theme. I transplanted it from Hexo to [Hugo](https
 
 - This theme has been tested only in my blog site. Maybe it's not suitable for your requirements, you can customizate it by your preferences.
 
-- Test in Hugo verion: 0.25
+- Test in Hugo verion: 0.38
 
 - If you have any questions, please give feedback
 
