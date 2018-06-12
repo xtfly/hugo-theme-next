@@ -16,7 +16,7 @@ NexT is a simple and animated theme. I transplanted it from Hexo to [Hugo](https
 
 3. move config.toml to the root directory in your hugo site, and modify it to the actual information for your site.
 
-4. create some makedown files in directory(content/post), like https://github.com/xtfly/xtfly.github.io/tree/hugo/content
+4. create some markdown files in directory(content/post), like https://github.com/xtfly/xtfly.github.io/tree/hugo/content
 
 5. start hugo server in root directory: `hugo server`
 
@@ -32,6 +32,26 @@ NexT is a simple and animated theme. I transplanted it from Hexo to [Hugo](https
 
 - If you have any questions, please give feedback
 
+## Markdown notes
+
+1. every markdown start with like this:
+
+    ```
+    ---
+    title: "xxxxxxx"
+    date: "2018-06-02"
+    categories:
+    - "技术"
+    tags:
+    - "Rust"
+    - "Programing"
+    toc: true
+    ---
+    ```
+
+1. add `<!--more-->` tag in your markdown for [manual summary splitting](https://gohugo.io/content-management/summaries/#user-defined-manual-summary-splitting) .
+
+
 ## Todo
 
 - [x] Sidebar menu
@@ -39,6 +59,7 @@ NexT is a simple and animated theme. I transplanted it from Hexo to [Hugo](https
 - [x] Auto toc display
 - [x] Support i18n
 - [x] Local Search
+- [x] Syntax Highlighter (thanks to [xulz](https://github.com/xtfly/hugo-theme-next/pull/6))
 
 ## License
 The [MIT License](LICENSE).
