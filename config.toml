@@ -12,7 +12,8 @@ HasCJKLanguage = true
 PreserveTaxonomyNames = false
 UglyUrls = false
 PygmentsStyle = "monokai"
-PygmentsUseClasses = true
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
 DefaultContentLanguage = "zh"
 
 [Params]
