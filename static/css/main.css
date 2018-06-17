@@ -850,7 +850,7 @@ pre .javascript .function {
   right: 50px;
   z-index: 1050;
   padding: 0 6px;
-  width: 25px;
+  width: initial;
   background: #222;
   font-size: 12px;
   opacity: 0.6;

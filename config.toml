@@ -26,8 +26,8 @@ DefaultContentLanguage = "zh"
   DateFormat = "2006-01-02"
   YearFormat = "2006年"
   MonthFormat = "01-02"
-  BaiduStatsId = "0b07433b4ab8d587dae7d34e71973839"
-  QQStatsId = "58416275"
+  #BaiduStatsId = "0b07433b4ab8d587dae7d34e71973839"
+  #QQStatsId = "58416275"
   Fancybox = true
 
 [Author]
