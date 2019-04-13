@@ -23,7 +23,7 @@
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
         <li class="menu-item {{ if $currentPage.IsMenuCurrent "main" . }}menu-item-active{{ end }}">
-          <a href="{{ .URL }}" rel="section">
+          <a href="{{ .Pre }}" rel="section">
               <i class="menu-item-icon fa fa-fw fa-{{ .Pre }}"></i> <br />{{ .Name }}
           </a>
         </li>
