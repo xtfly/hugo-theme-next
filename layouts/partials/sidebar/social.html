@@ -2,7 +2,7 @@
 <div class="links-of-author motion-element">
     {{ range .Site.Params.Socials }}
         <span class="links-of-author-item">
-        <a href="{{ .URL }}" target="_blank" title="{{ .Name }}">
+        <a href="{{ .Permalink }}" target="_blank" title="{{ .Name }}">
             <i class="fa fa-fw fa-{{ .Icon }}"></i>
             {{ .Name }}
         </a>

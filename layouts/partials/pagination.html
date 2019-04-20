@@ -21,15 +21,15 @@
 {{ $begin := $.Scratch.Get "begin"}}
 
 <nav class="pagination">
-    {{ if $pag.HasPrev }}<a class="extend prev" rel="prev" href="{{ $pag.Prev.URL  }}"><i class="fa fa-angle-left"></i></a>{{ end }}
+    {{ if $pag.HasPrev }}<a class="extend prev" rel="prev" href="{{ $pag.Prev.RelPermalink  }}"><i class="fa fa-angle-left"></i></a>{{ end }}
     {{ range $p := $pag.Pagers }}
         {{ if and (ge $p.PageNumber $begin) (le $p.PageNumber $end) }}
         {{ if eq $p $pag }}
           <span class="page-number current">{{ $p.PageNumber }}</span>
         {{ else }}
-          <a class="page-number" href="{{ $p.URL  }}">{{ $p.PageNumber }}</a>
+          <a class="page-number" href="{{ $p.RelPermalink  }}">{{ $p.PageNumber }}</a>
         {{ end }}
         {{ end }}
     {{ end }}
-    {{ if $pag.HasNext }}<a class="extend next" rel="next" href="{{ $pag.Next.URL }}"><i class="fa fa-angle-right"></i></a>{{ end }}
+    {{ if $pag.HasNext }}<a class="extend next" rel="next" href="{{ $pag.Next.RelPermalink }}"><i class="fa fa-angle-right"></i></a>{{ end }}
 </nav>

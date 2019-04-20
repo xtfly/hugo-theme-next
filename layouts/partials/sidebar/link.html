@@ -7,7 +7,7 @@
     <ul class="links-of-blogroll-list">
         {{ range .Site.Params.Links }}
         <li class="links-of-blogroll-item">
-            <a href="{{ .URL }}" title="{{ .Name }}" target="_blank">{{ .Name }}</a>
+            <a href="{{ .Permalink }}" title="{{ .Name }}" target="_blank">{{ .Name }}</a>
         </li>
         {{ end }}
     </ul>
