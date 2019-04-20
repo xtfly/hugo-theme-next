@@ -14,7 +14,6 @@
     <meta name="title" content="{{ if ne .Permalink " / " }}{{ .Title }} - {{ end }}{{ .Site.Title }}" />
     {{ with .Description }}<meta name="description" content="{{ . }}" />
     {{ else }}<meta name="description" content="{{ .Site.Params.Description }}">{{ end }} 
-    {{ if .RelPermalink }}<link rel="alternate" href="{{.RelPermalink}}" title="{{ .Site.Title }}" type="application/rss+xml" />{{ end }}
     <link rel="shortcut icon" href="/img/favicon.ico" />
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
     <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon.png" />
