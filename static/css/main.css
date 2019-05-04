@@ -1009,6 +1009,11 @@ pre .javascript .function {
 .post-body {
   font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
+.post-body h1 {
+  border-left: solid 5px #428bca;
+  padding: 5px;
+  margin: 10px 0;
+}
 @media (max-width: 767px) {
   .post-body {
     word-break: break-word;
