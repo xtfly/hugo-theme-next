@@ -12,10 +12,10 @@
 {{ end}}
 {{ $end := $.Scratch.Get "end"}}
 
-{{ $over := sub $end $tps }}
+{{ $over := sub $tps $end }}
 
 {{ if lt $over 0}}
-  {{ $begin := sub $begin $over}}
+  {{ $begin := add $begin $over}}
   {{ $.Scratch.Set "begin" $begin }}
 {{ end }}
 {{ $begin := $.Scratch.Get "begin"}}
