@@ -28,7 +28,7 @@ NexT is a simple and animated theme. I port it from Hexo to [Hugo](https://gohug
 
 - This theme has been tested only in my blog site. Maybe it's not suitable for your requirements, you can customizate it by your preferences.
 
-- Test in Hugo verion: 0.55
+- Test in Hugo verion: 0.58
 
 - If you have any questions, please give feedback
 

@@ -1,4 +1,4 @@
-{{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") }}
  <section id="posts" class="posts-expand">
 {{ range $paginator.Pages }}
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
