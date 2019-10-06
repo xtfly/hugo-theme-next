@@ -1,7 +1,7 @@
 <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="/post/">
-        <span class="site-state-item-count">{{ len (where .Site.Pages "Section" "post") }}</span>
+        <span class="site-state-item-count">{{ len (where .Site.RegularPages "Section" "post") }}</span>
         <span class="site-state-item-name">{{ i18n "Blog" }}</span>
       </a>
     </div>

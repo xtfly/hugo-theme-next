@@ -4,7 +4,7 @@
 <section id="posts" class="posts-collapse">
     <span class="archive-move-on"></span>
     <span class="archive-page-counter">
-   {{ i18n "StatsBlogs" (len (where .Site.Pages "Section" "post")) }}
+   {{ i18n "StatsBlogs" (len (where .Site.RegularPages "Section" "post")) }}
     </span>
 {{ range (.Paginate (.Data.Pages.GroupByDate "2006") 15 ).PageGroups  }}
 <div class="collection-title">

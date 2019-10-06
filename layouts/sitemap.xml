@@ -1,5 +1,5 @@
 <search>
-    {{range where .Site.Pages "Section" "post"}}
+    {{range where .Site.RegularPages "Section" "post"}}
      <entry>
         <title>{{ .Title }}</title>
         <url>{{ .Permalink }}</url>
