@@ -38,6 +38,10 @@ DefaultContentLanguage = "zh"
   #DuoShuo = "lanlingzi"
   Baidu = true
 
+[Params.utterances]  # https://utteranc.es/
+  owner = ""         # Your GitHub ID
+  repo = ""          # The repo to store comments
+
 [[Menu.Main]]
   Name = "首页"
   Pre = "home"
