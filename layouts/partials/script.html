@@ -7,6 +7,18 @@
     s.parentNode.insertBefore(hm, s);
     })();
 </script>{{ end}}
+
+{{ if .Site.Params.GoogleAnalyticsId }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GoogleAnalyticsId }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ .Site.Params.GoogleAnalyticsId }}');
+</script>{{ end}}
+
 {{ if .Site.Params.QQStatsId}}<script type="text/javascript" src="http://tajs.qq.com/stats?sId={{.Site.Params.QQStatsId}}" charset="UTF-8"></script> {{end}}
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
